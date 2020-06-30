@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
-var runSequence = require('run-sequence');
-var del = require('del');
+// var runSequence = require('run-sequence');
+// var del = require('del');
 
 var setting = {
   autoprefixer: {
@@ -10,7 +10,7 @@ var setting = {
   },
   browserSync: {
     //使わない方はコメントアウトする
-    proxy: 'flocssbemsample.cd',
+    proxy: 'storybookdemo.test',
     //server:{
     //    baseDir: 'httpdocs',
     //},
@@ -98,8 +98,9 @@ var setting = {
 //});
 
 // SASS
-gulp.task('scss',function(){
-  return gulp.src(setting.path.sass.src)
+function scss() {
+  return gulp
+    .src(setting.path.sass.src)
     .pipe($.plumber({
       errorHandler: $.notify.onError("Error: <%= error.message %>") //<-
     }))
@@ -107,7 +108,7 @@ gulp.task('scss',function(){
     .pipe($.autoprefixer(setting.autoprefixer.browser))
     .pipe(gulp.dest(setting.path.sass.dest))
     .pipe(browserSync.reload({stream: true}));
-});
+}
 
 // HTML
 //gulp.task('html', function(){
@@ -227,29 +228,41 @@ gulp.task('scss',function(){
 //gulp.task('clean', del.bind(null, setting.path.base.dest));
 
 // Build
-gulp.task('build', function(){
-  return runSequence(
-    ['scss']
-//    ['clean'],
-//    ['html', 'js', 'scss', 'lib', 'include', 'etc'],
-//    ['csscomb'],
-//    ['imagemin', 'cssminify', 'jsminify', 'cssbeautify']
-    );
-});
+function build(done) {
+  gulp.series(
+    'scss',
+    gulp.parallel(
+      done()
+    )
+  )
+  // return runSequence(
+  //   ['scss']
+  //    ['clean'],
+  //    ['html', 'js', 'scss', 'lib', 'include', 'etc'],
+  //    ['csscomb'],
+  //    ['imagemin', 'cssminify', 'jsminify', 'cssbeautify']
+  // );
+}
+gulp.task('build', gulp.series(
+  scss
+))
 
 // Watch
-gulp.task('watch', function(){
+function watch() {
   browserSync.init(setting.browserSync);
-  gulp.watch([setting.path.sass.src], ['scss']);
-  gulp.watch(['./assets/js/**/*.js'],　{interval: 0}, browserSync.reload);
-  gulp.watch(['./*.php'],　{interval: 0}, browserSync.reload);
-  gulp.watch(['./**/*.php'],　{interval: 0}, browserSync.reload);
-//  gulp.watch([setting.path.js.src], ['js']);
-//  gulp.watch([setting.path.lib.src], ['lib']);
-//  gulp.watch([setting.path.include.src], ['include']);
-//  gulp.watch([setting.path.etc.src], ['etc']);
+  gulp.watch([setting.path.sass.src], gulp.task('scss'));
+  // gulp.watch(['./assets/js/**/*.js'],　{interval: 0}, browserSync.reload);
+  // gulp.watch(['./*.php'],　{interval: 0}, browserSync.reload);
+  // gulp.watch(['./**/*.php'],　{interval: 0}, browserSync.reload);
+  //  gulp.watch([setting.path.js.src], ['js']);
+  //  gulp.watch([setting.path.lib.src], ['lib']);
+  //  gulp.watch([setting.path.include.src], ['include']);
+  //  gulp.watch([setting.path.etc.src], ['etc']);
 //  gulp.watch([setting.path.html.src], ['html']);
-//  gulp.watch([setting.path.image.src], ['imagemin']);
-});
+  //  gulp.watch([setting.path.image.src], ['imagemin']);
+}
 
-gulp.task('default',['watch']);
+gulp.task('default', gulp.series(
+  watch
+))
+// gulp.task('default',['watch']);
