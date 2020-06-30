@@ -1,0 +1,54 @@
+/*------------------------------------------------------------
+layout
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+body{
+	font-size: 1.4rem;
+	line-height: 1.6;
+    @include sp{
+		padding-top: 60px;
+    	font-size: 1.2rem;
+    }
+}
+
+
+/*
+------------------------------------------------------------*/
+.l-content{
+	@include center;
+	display: flex;
+    justify-content: space-between;
+    @include sp{
+    	display: block;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.l-main{
+	width: 800px;
+	margin-top: 50px;
+    @include sp{
+    	width: auto;
+    	margin-top: 20px;
+    	padding-left: 10px;
+    	padding-right: 10px;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.l-side{
+	width: 220px;
+	margin-top: 50px;
+    @include sp{
+    	width: auto;
+    	margin-top: 20px;
+    	padding-left: 10px;
+    	padding-right: 10px;
+ 	}
+}
+
+

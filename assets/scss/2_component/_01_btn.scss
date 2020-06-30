@@ -1,0 +1,120 @@
+/*------------------------------------------------------------
+btn
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.l-btn1{
+	
+	//-------------------------------------------------------
+	&--center{
+		text-align: center;
+
+	}
+	
+	//-------------------------------------------------------
+	&--right{
+		text-align: right;
+		
+	}
+	
+	//-------------------------------------------------------
+	&--2btnCenter{
+		display: flex;
+        justify-content: center;
+        @include sp{
+        	padding-left: 10px;
+        	padding-right: 10px;
+        }
+
+		//---------------------------------------------------
+        div{
+        	@include sp{
+	        	width: 48%;
+        	}
+	        &:last-child{
+	        	margin-left: 30px;
+	        	@include sp{
+	        		margin-left: 2%;
+	        	}
+	        }
+	    }
+
+		//---------------------------------------------------
+        .c-btn1 a{
+        	@include sp{
+	        	min-width: 100%;
+        	}
+        }
+
+		
+	}
+	
+	//-------------------------------------------------------
+	&--2btnBetween{
+		display: flex;
+	    justify-content: space-between;
+        @include sp{
+        	padding-left: 10px;
+        	padding-right: 10px;
+		    justify-content: center;
+        }
+
+		//---------------------------------------------------
+        div{
+        	@include sp{
+	        	width: 48%;
+        	}
+	        &:last-child{
+	        	@include sp{
+	        		margin-left: 2%;
+	        	}
+	        }
+        }
+		//---------------------------------------------------
+        .c-btn1 a{
+        	@include sp{
+	        	min-width: 100%;
+        	}
+        }
+	}
+
+}
+
+/*
+------------------------------------------------------------*/
+.c-btn1{
+
+	display: inline-block;
+
+	a{
+		color: #FFF;
+		background: #FC6E51;
+        border-radius: 30px;
+        line-height: 1;
+        text-align: center;
+        min-width: 200px;
+        padding: 13px 0;
+        font-size: 1.3rem;
+        display: inline-block;
+        text-decoration: none;
+        &:hover{
+        	text-decoration: underline;
+        }
+	}
+
+	//-------------------------------------------------------
+	&--color1{
+		a{
+			background: #37BC9B;
+		}
+	}
+
+	//-------------------------------------------------------
+	&--color2{
+		a{
+			background: #3BAFDA;
+		}
+	}
+
+}

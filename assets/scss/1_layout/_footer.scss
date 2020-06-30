@@ -1,0 +1,82 @@
+/*------------------------------------------------------------
+footer
+------------------------------------------------------------*/
+
+footer{
+	margin-top: 30px;
+}
+
+/* Sitemap
+------------------------------------------------------------*/
+.c-footSitemap{
+	border-top: 1px solid #CCC;
+    background: #EFEFEE;
+	padding: 30px 0;
+    @include sp{
+		padding: 15px 10px 5px 10px;
+    }
+
+	//-------------------------------------------------------
+	&__inner{
+	    @include center;
+		display: flex;
+	    justify-content: space-between;
+	    @include sp{
+   	        flex-wrap: wrap;
+	    }
+    }
+	
+	//-------------------------------------------------------
+	&__block{
+	    @include sp{
+	    	width: 48%;
+	    	margin-bottom: 20px;
+	    	&:first-child{
+	    		margin-top: 0;
+	    	}
+	    }
+	}
+
+	//-------------------------------------------------------
+	p{
+		font-weight: bold;
+		font-size: 1.4rem;
+		
+	}
+
+	//-------------------------------------------------------
+	ul{
+		
+	}
+
+	//-------------------------------------------------------
+	li{
+		margin-top: 6px;
+	}
+
+	//-------------------------------------------------------
+	a{
+		text-decoration: none;
+		color: #000;
+	}
+}
+
+
+/* Copyright
+------------------------------------------------------------*/
+.c-footCopy{
+	padding: 20px 0;
+	border-top: 1px solid #CCC;
+    @include sp{
+    	padding: 10px 0;
+    }
+
+	p{
+		text-align: center;
+		font-size: 1.2rem;
+		line-height: 1;
+	    @include sp{
+	    	font-size: 1.0rem;
+	    }
+	}
+}

@@ -1,0 +1,130 @@
+/*------------------------------------------------------------
+title
+------------------------------------------------------------*/
+
+
+/*
+------------------------------------------------------------*/
+.c-title1{
+	border-left: 8px solid #8CC152;
+	margin-bottom: 10px;
+
+	//-------------------------------------------------------
+	h1,h2,h3,h4,h5,h6{
+		font-size: 1.6rem;
+		padding-left: 15px;
+		@include sp{
+			font-size: 1.4rem;
+		}
+	}
+
+	//-------------------------------------------------------
+	&--color1{
+		border-left-color:#F6BB42;
+	}
+		
+	//-------------------------------------------------------
+	&--color2{
+		border-left-color:#E9573F;
+	}
+
+	//-------------------------------------------------------
+	&--textcolor1{
+		h1,h2,h3,h4,h5,h6{
+			color:#DA4453;
+		}
+	}
+
+	//-------------------------------------------------------
+	&--textcolor2{
+		h1,h2,h3,h4,h5,h6{
+			color:#3BAFDA;
+		}
+	}
+		
+	//-------------------------------------------------------
+	&--underline1{
+		border-bottom: 1px solid #CCC;
+	}
+		
+	//-------------------------------------------------------
+	&--topline1{
+		border-top: 1px solid #CCC;
+	}
+
+}
+
+
+/*
+------------------------------------------------------------*/
+.c-title2{
+	border-bottom: 1px solid #333;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	@include sp{
+	}
+	
+	h1,h2,h3,h4,h5,h6{
+		font-size: 1.8rem;
+		font-weight: bold;
+		@include sp{
+			font-size: 1.4rem;
+		}
+	}
+
+	//-------------------------------------------------------
+	&--color1{
+		border-bottom-color:#8CC152;
+		h1,h2,h3,h4,h5,h6{
+			color: #8CC152;
+		}
+
+	}
+}
+
+/*
+------------------------------------------------------------*/
+.c-title3{
+	h1,h2,h3,h4,h5,h6{
+		font-size: 1.4rem;
+		font-weight: bold;
+	}
+}
+
+
+/*
+------------------------------------------------------------*/
+.c-title4{
+
+	line-height: 1;
+	border-bottom: 1px solid #CCC;
+	
+	&__inner{
+		@include center;
+		display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100px;
+        @include sp{
+        	padding: 0 10px;
+        	height: 70px;
+        }
+	}
+
+	h2{
+		font-size: 2.2rem;
+        @include sp{
+			font-size: 1.6rem;
+        }
+	}
+
+	p{
+		margin-top: 8px;
+		font-size: 1.4rem;
+        @include sp{
+			font-size: 1.0rem;
+        }
+	}
+
+}
+
