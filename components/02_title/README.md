@@ -14,7 +14,5 @@ knobsは使用できない
 
 ## c-title4
 
-htmlファイルからの読み込み
-
-knobsは使用できない
+アドオンknobsでテキストやclassの変更が可能
 

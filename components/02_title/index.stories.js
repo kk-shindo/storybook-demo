@@ -2,7 +2,6 @@ import { withKnobs, text, select } from '@storybook/addon-knobs'
 import copyCodeBlock from '@pickra/copy-code-block'
 
 import HTML_C_Title3 from './c-title3.html'
-import HTML_C_Title4 from './c-title4.html'
 
 import README from './README.md' 
 
@@ -53,8 +52,18 @@ export const C_Title3 = () => {
   return (template + copyCodeBlock(template))
 }
 
-/* htmlファイルから読み込むパターン */
+/* knobsで変更するパターン */
 export const C_Title4 = () => {
-  const template = HTML_C_Title4
+  const tempText = text('Text', 'TitleTitleTitle')
+  const SubText = text('SubText', '')
+  const tempSubText = SubText ? `<p>${SubText}</p>` : ``
+  const template = (`
+    <div class="c-title4">
+      <div class="c-title4__inner">
+        <h2>${tempText}</h2>
+        ${tempSubText}
+      </div>
+    </div>
+  `)
   return (template + copyCodeBlock(template))
 }
