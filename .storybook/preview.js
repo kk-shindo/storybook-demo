@@ -1,9 +1,11 @@
 import { configure, addParameters, addDecorator } from '@storybook/html'
+import { withKnobs } from '@storybook/addon-knobs'
 import { withA11y } from '@storybook/addon-a11y'
 import { themes } from '@storybook/theming'
 
 import '../assets/css/style.css'
 
+addDecorator(withKnobs)
 addDecorator(withA11y)
 
 const customViewports = {

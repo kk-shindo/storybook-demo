@@ -1,13 +1,14 @@
-import { withKnobs, text, select } from '@storybook/addon-knobs'
+import { text, select } from '@storybook/addon-knobs'
 import copyCodeBlock from '@pickra/copy-code-block'
 
+// HTML
 import HTML_C_Title3 from './c-title3.html'
 
+// README
 import README from './README.md' 
 
 export default {
   title: '02_Title',
-  decorators: [withKnobs],
   parameters: {
     notes: { README }
   }

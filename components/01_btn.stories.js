@@ -1,11 +1,10 @@
-import { withKnobs } from '@storybook/addon-knobs'
 import copyCodeBlock from '@pickra/copy-code-block'
 
+// README
 import README from './01_btn.md' 
 
 export default {
   title: '01_Button',
-  decorators: [withKnobs],
   parameters: {
     notes: { README }
   }
