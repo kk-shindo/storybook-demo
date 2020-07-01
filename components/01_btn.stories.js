@@ -74,7 +74,7 @@ export const L_Button1_2BtnCenter = () => {
   return (template + copyCodeBlock(template))
 }
 
-export const LButton1_2BtnBetween = () => {
+export const L_Button1_2BtnBetween = () => {
   const template = (`
     <div class="l-btn1 l-btn1--2btnBetween">
       <div class="c-btn1">
