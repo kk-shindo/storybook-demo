@@ -9,3 +9,6 @@ node_modules
 
 # Keep Files
 !.gitkeep
+
+# storybook static
+storybook-static
