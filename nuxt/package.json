@@ -9,7 +9,8 @@
     "export": "nuxt export",
     "serve": "nuxt serve",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint": "npm run lint:js"
+    "lint": "npm run lint:js",
+    "storybook": "start-storybook -p 9001"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
+    "@storybook/vue": "^5.3.19",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.2.0",
     "eslint-plugin-nuxt": "^1.0.0"
