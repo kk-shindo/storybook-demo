@@ -1,0 +1,74 @@
+/*------------------------------------------------------------
+service
+------------------------------------------------------------*/
+
+/* 
+------------------------------------------------------------*/
+.p-service{
+	
+	.c-title4{
+		background: #5D9CEC;
+		color: #FFF;
+	}
+
+}
+
+/* 
+------------------------------------------------------------*/
+.p-service1{
+	margin-bottom: 40px;
+	margin-top: 40px;
+	@include sp{
+		margin-top: 10px;
+	}
+}
+
+/* 
+------------------------------------------------------------*/
+.p-service2{
+	margin-bottom: 40px;
+
+	&__txt1{
+		margin-bottom: 20px;
+	}
+
+}
+
+/* 
+------------------------------------------------------------*/
+.p-service3{
+	margin-bottom: 40px;
+
+	.c-table1{
+		margin-bottom: 30px;
+	}
+
+	.l-btn1{
+		margin-top: 30px;
+	}
+}
+
+/* 
+------------------------------------------------------------*/
+.p-service4{
+
+	p{
+		margin-bottom: 20px;
+	}
+	.c-title1{
+		margin-bottom: 20px;
+	}
+
+	.c-title3{
+		margin-bottom: 10px;
+	}
+
+
+	.c-imgtext1{
+		margin-bottom: 30px;
+		@include sp{
+			margin-bottom: 15px;
+		}
+	}
+
+}
