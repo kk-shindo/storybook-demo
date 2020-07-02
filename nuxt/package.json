@@ -19,10 +19,16 @@
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/style-resources": "^1.0.0",
     "@storybook/vue": "^5.3.19",
     "babel-eslint": "^10.1.0",
     "babel-preset-vue": "^2.0.2",
+    "css-loader": "^3.6.0",
     "eslint": "^7.2.0",
-    "eslint-plugin-nuxt": "^1.0.0"
+    "eslint-plugin-nuxt": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "storybook-addon-vue-info": "^1.4.2",
+    "style-loader": "^1.2.1"
   }
 }

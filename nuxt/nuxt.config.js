@@ -46,14 +46,15 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/style-resources'
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
   ],
   /*
   ** Axios module configuration
@@ -65,5 +66,14 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+  /*
+  ** StyleResources configuration
+  */
+  styleResources: {
+    // Doc: https://github.com/nuxt-community/style-resources-module
+    scss: [
+      './assets/scss/0_base/*.scss'
+    ]
   }
 }

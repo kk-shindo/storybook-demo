@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue'
 
 import Logo from '../components/Logo.vue'
 
-storiesOf('MyButton', module)
+storiesOf('Logo', module)
 .add('logo', () => ({
   components: { Logo },
   template: `<Logo />`
