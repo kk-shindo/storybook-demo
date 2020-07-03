@@ -28,7 +28,7 @@ storiesOf('1_Layout', module)
   components: { Main },
   template: `<Main />`
 }))
-.add('aside', () => ({
+.add('side', () => ({
   components: { Side },
   template: `<Side />`
 }))

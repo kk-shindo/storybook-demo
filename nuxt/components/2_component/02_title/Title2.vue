@@ -1,11 +1,18 @@
 <template>
-  <div class="c-title2 u-mt20">
+  <div :class="'c-title2 u-mt20 '+className">
     <h2><slot /></h2>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    className: {
+      type: String,
+      default: ''
+    }
+  }
+}
 </script>
 
 <style lang="scss">

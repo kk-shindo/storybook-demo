@@ -1,5 +1,5 @@
 <template>
-  <div class="c-list2 u-mt20">
+  <div class="c-list2">
     <ul>
       <li v-for="(listItem, key) in listItems" :key="key">
         <a :href="listItem.href">{{ listItem.name }}</a>
