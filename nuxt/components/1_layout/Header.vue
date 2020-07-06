@@ -1,208 +1,21 @@
 <template>
   <div>
-    <div class="pc-only">
-      <header class="c-headPC">
-        <div class="c-headPC__inner">
-          <h1><a href=""><img src="https://placehold.jp/250x50.png"></a></h1>
-          <ul>
-            <li><a href="">Link1</a></li>
-            <li><a href="">Link2</a></li>
-            <li><a href="">Link3</a></li>
-          </ul>
-        </div>
-      </header>
-      <nav class="c-gnavi">
-        <ul>
-          <li><a href="">navi</a></li>
-          <li><a href="">navi</a></li>
-          <li><a href="">navi</a></li>
-          <li><a href="">navi</a></li>
-          <li><a href="">navi</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="sp-only">
-      <header class="c-headSP">
-        <div class="c-headSP_inner">
-          <h1><a href=""><img src="https://placehold.jp/150x40.png"></a></h1>
-          <div class="c-menuSP">
-            <div class="c-menuSP__1" />
-            <div class="c-menuSP__2" />
-            <div class="c-menuSP__3" />
-          </div>
-          <nav class="c-menulistSP">
-            <ul>
-              <li><a href="">navi</a></li>
-              <li><a href="">navi</a></li>
-              <li><a href="">navi</a></li>
-              <li><a href="">navi</a></li>
-              <li><a href="">navi</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-    </div>
+    <HeaderPC />
+    <HeaderSP />
   </div>
 </template>
 
 <script>
-export default {}
+import HeaderPC from '~/components/1_layout/HeaderPC'
+import HeaderSP from '~/components/1_layout/HeaderSP'
+
+export default {
+  components: {
+    HeaderPC,
+    HeaderSP
+  }
+}
 </script>
 
 <style lang="scss">
-/*------------------------------------------------------------
-header
-------------------------------------------------------------*/
-
-/* PC
-------------------------------------------------------------*/
-.c-headPC{
-  border-bottom: 1px solid #CCC;
-
-  //-------------------------------------------------------
-  &__inner{
-    height: 80px;
-    @include center;
-    display: flex;
-        justify-content: space-between;
-        align-items: center;
-  }
-
-  //-------------------------------------------------------
-  h1{}
-
-  //-------------------------------------------------------
-  ul{
-    display: inline-flex;
-  }
-
-  //-------------------------------------------------------
-  li{
-    margin-left: 20px;
-    a{
-      text-decoration: none;
-      font-size: 1.6rem;
-      color: #333;
-    }
-  }
-}
-
-/*
-------------------------------------------------------------*/
-.c-gnavi{
-  border-bottom: 1px solid #CCC;
-
-  //-------------------------------------------------------
-  ul{
-    @include center;
-    display: flex;
-        justify-content: space-between;
-    border-left: 1px solid #CCC;
-  }
-
-  //-------------------------------------------------------
-  li{
-    width: 25%;
-    border-right: 1px solid #CCC;
-  }
-
-  //-------------------------------------------------------
-  a{
-    display: flex;
-    text-decoration: none;
-    height: 40px;
-    font-size: 1.4rem;
-        align-items: center;
-        background: #EFEFEF;
-        justify-content: center;
-        color: #333;
-  }
-}
-
-/* SP
-------------------------------------------------------------*/
-.c-headSP{
-  border-bottom: 1px solid #CCC;
-  background: #FFF;
-  height: 60px;
-  padding-left: 10px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  padding-top: 10px;
-
-  //-------------------------------------------------------
-  &__inner{
-      position: relative;
-    display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-}
-
-/*
-------------------------------------------------------------*/
-.c-menuSP {
-  $root:&;
-  width: 30px;
-  height: 30px;
-  top: 11px;
-  right: 10px;
-  cursor: pointer;
-  position: absolute;
-
-  //-------------------------------------------------------
-  &__1,
-  &__2,
-  &__3{
-    width: 100%;
-    height: 5px;
-    background: #000;
-    margin: 6px auto;
-    backface-visibility: hidden;
-  }
-
-  //-------------------------------------------------------
-  &.is-open {
-    #{$root}__1 {
-      transform:rotate(45deg) translate(7px, 7px);
-    }
-
-    #{$root}__2 {
-      opacity: 0;
-    }
-
-    #{$root}__3 {
-      transform:rotate(-45deg) translate(8px, -8px);
-    }
-  }
-}
-
-/*
-------------------------------------------------------------*/
-.c-menulistSP {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  display: none;
-
-  //-------------------------------------------------------
-  ul{
-    background: #FFF;
-  }
-
-  //-------------------------------------------------------
-  li{
-    border-bottom:1px solid #CCC;
-  }
-
-  //-------------------------------------------------------
-  a{
-    text-decoration: none;
-    display: block;
-    color: #333;
-    padding: 10px 10px;
-  }
-}
 </style>

@@ -1,16 +1,27 @@
 <template>
-  <nav class="c-breadcrumb1 c-breadcrumb1--bottomline pc-only">
+  <nav :class="'c-breadcrumb1 c-breadcrumb1--bottomline '+(pcOnly ? 'pc-only' : '')">
     <ul>
-      <li><a href="">HOME</a></li>
-      <li><a href="">タイトル</a></li>
-      <li><a href="">タイトル</a></li>
-      <li>タイトル</li>
+      <li v-for="(listItem, key) in listItems" :key="key">
+        <a v-if="listItem.href" :href="listItem.href">{{ listItem.text }}</a>
+        <span v-else>{{ listItem.text }}</span>
+      </li>
     </ul>
   </nav>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    pcOnly: {
+      type: Boolean,
+      default: false
+    },
+    listItems: {
+      type: Array,
+      default: () => []
+    }
+  }
+}
 </script>
 
 <style lang="scss">

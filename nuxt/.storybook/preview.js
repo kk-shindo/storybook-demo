@@ -1,12 +1,16 @@
 import { configure, addParameters, addDecorator } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
 import { withA11y } from '@storybook/addon-a11y'
+import { withPaddings } from 'storybook-addon-paddings'
+import { withInfo } from 'storybook-addon-vue-info'
 import { themes } from '@storybook/theming'
 
 // import '../assets/css/style.css'
 
 addDecorator(withKnobs)
 addDecorator(withA11y)
+addDecorator(withPaddings)
+addDecorator(withInfo)
 
 const customViewports = {
   iPhone5: {
@@ -50,5 +54,10 @@ addParameters({
   darkMode: {
     dark: { ...themes.dark, appBg: 'black' },
     light: { ...themes.normal, appBg: 'white' }
-  }
+  },
+  // paddings: [
+  //   { name: 'Small', value: '16px' },
+  //   { name: 'Medium', value: '32px', default: true },
+  //   { name: 'Large', value: '64px' },
+  // ],
 })

@@ -12,9 +12,9 @@ export default {}
 .l-content{
   @include center;
   display: flex;
-    justify-content: space-between;
-    @include sp{
-      display: block;
-    }
+  justify-content: space-between;
+  @include sp{
+    display: block;
+  }
 }
 </style>

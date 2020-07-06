@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .c-list1{
   $root:&;
   display: flex;

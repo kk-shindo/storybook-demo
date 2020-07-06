@@ -73,7 +73,7 @@ export default {
   styleResources: {
     // Doc: https://github.com/nuxt-community/style-resources-module
     scss: [
-      './assets/scss/0_base/*.scss'
+      './assets/scss/style.scss'
     ]
   }
 }
