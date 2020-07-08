@@ -1,8 +1,8 @@
 <template>
-  <div class="c-list2">
+  <div class="c-list5">
     <ul>
       <li v-for="(listItem, key) in listItems" :key="key">
-        <a :href="listItem.href" v-html="listItem.text"></a>
+        <a :href="listItem.href"><img :src="listItem.src"></a>
       </li>
     </ul>
   </div>
@@ -19,14 +19,13 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.c-list2{
-  ul{
-    margin-left: 1.7rem;
-  }
+<style lang="scss">
+.c-list5{
   li{
-    list-style-type: disc;
-    font-size: 1.4rem;
+    margin-top: 15px;
+    &:first-child{
+      margin-top: 0;
+    }
   }
 }
 </style>

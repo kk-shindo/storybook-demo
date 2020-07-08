@@ -1,6 +1,23 @@
 <template>
   <div :class="'c-title3 '+className">
-    <h3><slot /></h3>
+    <h1 v-if="level === 'h1'">
+      <slot />
+    </h1>
+    <h2 v-if="level === 'h2'">
+      <slot />
+    </h2>
+    <h3 v-if="level === 'h3'">
+      <slot />
+    </h3>
+    <h4 v-if="level === 'h4'">
+      <slot />
+    </h4>
+    <h5 v-if="level === 'h5'">
+      <slot />
+    </h5>
+    <h6 v-if="level === 'h6'">
+      <slot />
+    </h6>
   </div>
 </template>
 
@@ -10,6 +27,10 @@ export default {
     className: {
       type: String,
       default: ''
+    },
+    level: {
+      type: String,
+      default: 'h1'
     }
   }
 }

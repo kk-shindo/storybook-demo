@@ -1,5 +1,5 @@
 <template>
-  <div class="c-list1">
+  <div :class="'c-list1 '+className">
     <div v-for="(listItem, key) in listItems" :key="key" class="c-list1__card">
       <div v-if="listItem.img" class="c-list1__img1">
         <img :src="listItem.img">
@@ -9,8 +9,8 @@
           <img :src="listItem.thumb">
         </div>
         <div class="c-list1__text">
-          <h3>{{ listItem.title }}</h3>
-          <p>{{ listItem.text }}</p>
+          <h3 v-html="listItem.title"></h3>
+          <p v-html="listItem.text" />
         </div>
       </div>
     </div>
@@ -23,6 +23,10 @@ export default {
     listItems: {
       type: Array,
       default: () => []
+    },
+    className: {
+      type: String,
+      default: ''
     }
   }
 }
@@ -68,7 +72,6 @@ export default {
       }
     }
   }
-
 
   //-------------------------------------------------------
   &__card{

@@ -1,8 +1,27 @@
 <template>
   <div :class="'c-title4 '+className">
     <div class="c-title4__inner">
-      <h2><slot /></h2>
-      <p v-if="subTitle">{{ subTitle }}</p>
+      <h1 v-if="level === 'h1'">
+        <slot />
+      </h1>
+      <h2 v-if="level === 'h2'">
+        <slot />
+      </h2>
+      <h3 v-if="level === 'h3'">
+        <slot />
+      </h3>
+      <h4 v-if="level === 'h4'">
+        <slot />
+      </h4>
+      <h5 v-if="level === 'h5'">
+        <slot />
+      </h5>
+      <h6 v-if="level === 'h6'">
+        <slot />
+      </h6>
+      <p v-if="subTitle">
+        {{ subTitle }}
+      </p>
     </div>
   </div>
 </template>
@@ -17,6 +36,10 @@ export default {
     subTitle: {
       type: String,
       default: ''
+    },
+    level: {
+      type: String,
+      default: 'h1'
     }
   }
 }
@@ -26,7 +49,7 @@ export default {
 .c-title4{
   line-height: 1;
   border-bottom: 1px solid #CCC;
-  
+
   &__inner{
     @include center;
     display: flex;

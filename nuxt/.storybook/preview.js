@@ -55,9 +55,9 @@ addParameters({
     dark: { ...themes.dark, appBg: 'black' },
     light: { ...themes.normal, appBg: 'white' }
   },
-  // paddings: [
-  //   { name: 'Small', value: '16px' },
-  //   { name: 'Medium', value: '32px', default: true },
-  //   { name: 'Large', value: '64px' },
-  // ],
+  paddings: [
+    { name: 'Small', value: '16px' },
+    { name: 'Medium', value: '32px', default: true },
+    { name: 'Large', value: '64px' },
+  ],
 })

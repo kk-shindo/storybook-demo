@@ -3,6 +3,7 @@
     <Breadcrumb
       :pc-only="false"
       :list-items="breadcrumbItems"
+      :class-name="'c-breadcrumb1--topline'"
     />
     <FooterSitemap />
     <FooterCopy>copyright xxxxxxxx 2018</FooterCopy>

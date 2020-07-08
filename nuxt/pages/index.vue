@@ -4,10 +4,13 @@
     <Breadcrumb
       :pc-only="true"
       :list-items="breadcrumbItems"
+      :class-name="'c-breadcrumb1--bottomline'"
     />
     <Content>
       <Main>
-        <Title2>Sample pages</Title2>
+        <Title2 :level="'h2'">
+          Sample pages
+        </Title2>
         <List2 :list-items="list2Items" />
       </Main>
       <Side />
@@ -40,20 +43,20 @@ export default {
       ],
       list2Items: [
         {
-          name: 'component',
-          href: '/component/'
+          href: '/component/',
+          text: 'component'
         },
         {
-          name: 'top',
-          href: '/top/'
+          href: '/top/',
+          text: 'top'
         },
         {
-          name: 'company',
-          href: '/company/'
+          href: '/company/',
+          text: 'company'
         },
         {
-          name: 'service',
-          href: '/service/'
+          href: '/service/',
+          text: 'service'
         }
       ]
     }

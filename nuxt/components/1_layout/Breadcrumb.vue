@@ -1,5 +1,5 @@
 <template>
-  <nav :class="'c-breadcrumb1 c-breadcrumb1--bottomline '+(pcOnly ? 'pc-only' : '')">
+  <nav :class="'c-breadcrumb1 '+className+(pcOnly ? ' pc-only' : '')">
     <ul>
       <li v-for="(listItem, key) in listItems" :key="key">
         <a v-if="listItem.href" :href="listItem.href">{{ listItem.text }}</a>
@@ -19,6 +19,10 @@ export default {
     listItems: {
       type: Array,
       default: () => []
+    },
+    className: {
+      type: String,
+      default: ''
     }
   }
 }

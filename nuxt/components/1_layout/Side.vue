@@ -1,5 +1,7 @@
 <template>
-  <aside class="l-side" />
+  <aside class="l-side">
+    <slot />
+  </aside>
 </template>
 
 <script>
