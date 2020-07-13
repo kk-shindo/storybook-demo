@@ -1,22 +1,13 @@
 <template>
-  <div class="container">
-    <Header />
-    <Breadcrumb
-      :pc-only="true"
-      :list-items="breadcrumbItems"
-      :class-name="'c-breadcrumb1--bottomline'"
-    />
-    <Content>
-      <Main>
-        <Title2 :level="'h2'">
-          Sample pages
-        </Title2>
-        <List2 :list-items="list2Items" />
-      </Main>
-      <Side />
-    </Content>
-    <Footer :breadcrumb-items="breadcrumbItems" />
-  </div>
+  <Content>
+    <Main>
+      <Title2 :level="'h2'">
+        Sample pages
+      </Title2>
+      <List2 :list-items="list2Items" />
+    </Main>
+    <Side />
+  </Content>
 </template>
 
 <script>
@@ -59,6 +50,14 @@ export default {
           text: 'service'
         }
       ]
+    }
+  },
+  mounted () {
+    this.updateBreadcrumbHandler()
+  },
+  methods: {
+    updateBreadcrumbHandler () {
+      this.$nuxt.$emit('updateBreadcrumbHandler', this.breadcrumbItems)
     }
   }
 }

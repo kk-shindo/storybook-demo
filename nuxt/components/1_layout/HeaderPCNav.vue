@@ -2,7 +2,9 @@
   <nav class="c-gnavi">
     <ul>
       <li v-for="(listItem, key) in listItems" :key="key">
-        <a :href="listItem.href">{{ listItem.text }}</a>
+        <nuxt-link :to="listItem.href">
+          {{ listItem.text }}
+        </nuxt-link>
       </li>
     </ul>
   </nav>
@@ -20,35 +22,33 @@ export default {
 </script>
 
 <style lang="scss">
-/*
-------------------------------------------------------------*/
 .c-gnavi{
   border-bottom: 1px solid #CCC;
 
   //-------------------------------------------------------
   ul{
     @include center;
-    display: flex;
-        justify-content: space-between;
     border-left: 1px solid #CCC;
+    display: flex;
+    justify-content: space-between;
   }
 
   //-------------------------------------------------------
   li{
-    width: 25%;
+    width: 20%;
     border-right: 1px solid #CCC;
   }
 
   //-------------------------------------------------------
   a{
-    display: flex;
-    text-decoration: none;
     height: 40px;
+    background: #EFEFEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
     font-size: 1.4rem;
-        align-items: center;
-        background: #EFEFEF;
-        justify-content: center;
-        color: #333;
+    text-decoration: none;
   }
 }
 </style>

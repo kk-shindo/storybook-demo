@@ -2,7 +2,9 @@
   <div class="c-list4">
     <ul>
       <li v-for="(listItem, key) in listItems" :key="key">
-        <a :href="listItem.href" v-html="listItem.text"></a>
+        <a :href="listItem.href">
+          {{ listItem.text }}
+        </a>
       </li>
     </ul>
   </div>

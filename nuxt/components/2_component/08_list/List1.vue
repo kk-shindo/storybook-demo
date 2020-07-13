@@ -1,16 +1,20 @@
 <template>
   <div :class="'c-list1 '+className">
     <div v-for="(listItem, key) in listItems" :key="key" class="c-list1__card">
-      <div v-if="listItem.img" class="c-list1__img1">
-        <img :src="listItem.img">
+      <div v-if="listItem.main.src" class="c-list1__img1">
+        <img :src="listItem.main.src" :alt="listItem.main.alt">
       </div>
       <div v-if="listItem.thumb && listItem.title && listItem.text" class="c-list1__info">
-        <div v-if="listItem.thumb" class="c-list1__img2">
-          <img :src="listItem.thumb">
+        <div v-if="listItem.thumb.src" class="c-list1__img2">
+          <img :src="listItem.thumb.src" :alt="listItem.thumb.alt">
         </div>
         <div class="c-list1__text">
-          <h3 v-html="listItem.title"></h3>
-          <p v-html="listItem.text" />
+          <h3>
+            {{ listItem.title }}
+          </h3>
+          <p>
+            {{ listItem.text }}
+          </p>
         </div>
       </div>
     </div>

@@ -2,7 +2,9 @@
   <div class="c-list5">
     <ul>
       <li v-for="(listItem, key) in listItems" :key="key">
-        <a :href="listItem.href"><img :src="listItem.src"></a>
+        <nuxt-link :to="listItem.href">
+          <img :src="listItem.src">
+        </nuxt-link>
       </li>
     </ul>
   </div>

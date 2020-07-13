@@ -1,12 +1,18 @@
 <template>
   <div :class="'c-btn1 '+className">
-    <a href=""><slot /></a>
+    <nuxt-link :to="href">
+      <slot />
+    </nuxt-link>
   </div>
 </template>
 
 <script>
 export default {
   props: {
+    href: {
+      type: String,
+      default: '#'
+    },
     className: {
       type: String,
       default: ''

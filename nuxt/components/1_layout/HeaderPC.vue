@@ -2,11 +2,27 @@
   <div class="pc-only">
     <header class="c-headPC">
       <div class="c-headPC__inner">
-        <h1><a href=""><img src="https://placehold.jp/250x50.png"></a></h1>
+        <h1>
+          <nuxt-link to="/">
+            <img src="https://placehold.jp/250x50.png">
+          </nuxt-link>
+        </h1>
         <ul>
-          <li><a href="">Link1</a></li>
-          <li><a href="">Link2</a></li>
-          <li><a href="">Link3</a></li>
+          <li>
+            <nuxt-link to="#">
+              Link1
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="#">
+              Link2
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="#">
+              Link3
+            </nuxt-link>
+          </li>
         </ul>
       </div>
     </header>
@@ -37,12 +53,12 @@ export default {
           text: 'navi'
         },
         {
-          href: '#',
-          text: 'navi'
+          href: '/storybook-static',
+          text: 'storybook'
         },
         {
-          href: '#',
-          text: 'navi'
+          href: '/component',
+          text: 'component'
         }
       ]
     }

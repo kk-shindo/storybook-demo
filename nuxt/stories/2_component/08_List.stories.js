@@ -25,65 +25,130 @@ storiesOf('2_component/08_list', module)
         return {
           baseItems: [
             {
-              img: 'https://placehold.jp/185x180.png',
-              thumb: 'https://placehold.jp/50x50.png',
-              title: 'titletitle',
+              main: {
+                src: 'https://placehold.jp/185x180.png',
+                alt: 'Dummy'
+              },
+              thumb: {
+                src: 'https://placehold.jp/50x50.png',
+                alt: 'Dummy'
+              },
+              title: 'title title',
               text: 'Dummy Dummy Dummy'
             },
             {
-              img: 'https://placehold.jp/185x180.png',
-              thumb: 'https://placehold.jp/50x50.png',
-              title: 'titletitle',
+              main: {
+                src: 'https://placehold.jp/185x180.png',
+                alt: 'Dummy'
+              },
+              thumb: {
+                src: 'https://placehold.jp/50x50.png',
+                alt: 'Dummy'
+              },
+              title: 'title title',
               text: 'Dummy Dummy Dummy'
             },
             {
-              img: 'https://placehold.jp/185x180.png',
-              thumb: 'https://placehold.jp/50x50.png',
-              title: 'titletitle',
+              main: {
+                src: 'https://placehold.jp/185x180.png',
+                alt: 'Dummy'
+              },
+              thumb: {
+                src: 'https://placehold.jp/50x50.png',
+                alt: 'Dummy'
+              },
+              title: 'title title',
               text: 'Dummy Dummy Dummy'
             },
             {
-              img: 'https://placehold.jp/185x180.png',
-              thumb: 'https://placehold.jp/50x50.png',
-              title: 'titletitle',
+              main: {
+                src: 'https://placehold.jp/185x180.png',
+                alt: 'Dummy'
+              },
+              thumb: {
+                src: 'https://placehold.jp/50x50.png',
+                alt: 'Dummy'
+              },
+              title: 'title title',
               text: 'Dummy Dummy Dummy'
             }
           ],
           col3Items: [
             {
-              img: 'https://placehold.jp/253x180.png',
-              thumb: 'https://placehold.jp/50x50.png',
-              title: 'titletitle',
+              main: {
+                src: 'https://placehold.jp/253x180.png',
+                alt: 'Dummy'
+              },
+              thumb: {
+                src: 'https://placehold.jp/50x50.png',
+                alt: 'Dummy'
+              },
+              title: 'title title',
               text: 'Dummy Dummy Dummy'
             },
             {
-              img: 'https://placehold.jp/253x180.png',
-              thumb: 'https://placehold.jp/50x50.png',
-              title: 'titletitle',
+              main: {
+                src: 'https://placehold.jp/253x180.png',
+                alt: 'Dummy'
+              },
+              thumb: {
+                src: 'https://placehold.jp/50x50.png',
+                alt: 'Dummy'
+              },
+              alt: 'Dummy',
+              title: 'title title',
               text: 'Dummy Dummy Dummy'
             },
             {
-              img: 'https://placehold.jp/253x180.png',
-              thumb: 'https://placehold.jp/50x50.png',
-              title: 'titletitle',
+              main: {
+                src: 'https://placehold.jp/253x180.png',
+                alt: 'Dummy'
+              },
+              thumb: {
+                src: 'https://placehold.jp/50x50.png',
+                alt: 'Dummy'
+              },
+              alt: 'Dummy',
+              title: 'title title',
               text: 'Dummy Dummy Dummy'
             },
             {
-              img: 'https://placehold.jp/253x180.png',
-              thumb: 'https://placehold.jp/50x50.png',
-              title: 'titletitle',
+              main: {
+                src: 'https://placehold.jp/253x180.png',
+                alt: 'Dummy'
+              },
+              thumb: {
+                src: 'https://placehold.jp/50x50.png',
+                alt: 'Dummy'
+              },
+              alt: 'Dummy',
+              title: 'title title',
               text: 'Dummy Dummy Dummy'
             },
             {
-              img: 'https://placehold.jp/253x180.png',
-              thumb: 'https://placehold.jp/50x50.png',
-              title: 'titletitle',
+              main: {
+                src: 'https://placehold.jp/253x180.png',
+                alt: 'Dummy'
+              },
+              thumb: {
+                src: 'https://placehold.jp/50x50.png',
+                alt: 'Dummy'
+              },
+              alt: 'Dummy',
+              title: 'title title',
               text: 'Dummy Dummy Dummy'
             },
             {
-              img: 'https://placehold.jp/253x180.png',
-              thumb: 'https://placehold.jp/50x50.png',
-              title: 'titletitle',
+              main: {
+                src: 'https://placehold.jp/253x180.png',
+                alt: 'Dummy'
+              },
+              thumb: {
+                src: 'https://placehold.jp/50x50.png',
+                alt: 'Dummy'
+              },
+              alt: 'Dummy',
+              title: 'title title',
               text: 'Dummy Dummy Dummy'
             }
           ]

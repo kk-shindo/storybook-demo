@@ -2,7 +2,9 @@
   <nav :class="'c-breadcrumb1 '+className+(pcOnly ? ' pc-only' : '')">
     <ul>
       <li v-for="(listItem, key) in listItems" :key="key">
-        <a v-if="listItem.href" :href="listItem.href">{{ listItem.text }}</a>
+        <nuxt-link v-if="listItem.href" :to="listItem.href">
+          {{ listItem.text }}
+        </nuxt-link>
         <span v-else>{{ listItem.text }}</span>
       </li>
     </ul>
@@ -45,16 +47,16 @@ breadcrumb
 
   //-------------------------------------------------------
   li{
-    line-height: 1;
     font-size: 1.2rem;
+    line-height: 1;
     @include sp{
       font-size: 1.0rem;
     }
 
     &:after{
-      content:"›";
-      display: inline-block;
       margin: 0 7px;
+      display: inline-block;
+      content:"›";
     }
     &:last-child{
       &:after{

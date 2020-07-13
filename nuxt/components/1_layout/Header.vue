@@ -2,6 +2,11 @@
   <div>
     <HeaderPC />
     <HeaderSP />
+    <Breadcrumb
+      :pc-only="true"
+      :list-items="breadcrumbItems"
+      :class-name="'c-breadcrumb1--bottomline'"
+    />
   </div>
 </template>
 
@@ -13,6 +18,12 @@ export default {
   components: {
     HeaderPC,
     HeaderSP
+  },
+  props: {
+    breadcrumbItems: {
+      type: Array,
+      default: () => {}
+    }
   }
 }
 </script>

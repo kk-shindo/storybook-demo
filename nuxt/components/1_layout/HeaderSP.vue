@@ -2,7 +2,7 @@
   <div class="sp-only">
     <header class="c-headSP">
       <div class="c-headSP_inner">
-        <h1><a href=""><img src="https://placehold.jp/150x40.png"></a></h1>
+        <h1><a href="/"><img src="https://placehold.jp/150x40.png"></a></h1>
         <HeaderSPBtn @toggle="toggleMenu" />
         <HeaderSPNav :is-open="navOpen" :list-items="menuItems" />
       </div>
