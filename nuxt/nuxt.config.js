@@ -55,6 +55,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/pwa'
   ],
   /*
   ** Axios module configuration
@@ -75,5 +76,12 @@ export default {
     scss: [
       './assets/scss/style.scss'
     ]
+  },
+  manifest: {
+    name: 'storybook demo',
+    lang: 'ja'
+  },
+  generate: {
+    fallback: true
   }
 }
